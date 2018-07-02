@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<style>
+.c-customIcheck {
+	position: relative;
+}
+.c-customIcheck.c-inline {
+	display: inline-block;
+    margin-right: 10px;
+}
+.c-customIcheck input[type="checkbox"] {
+	visibility: hidden;
+}
+.c-customIcheck input[type="checkbox"] + label {
+	
+}
+.c-customIcheck input[type="checkbox"] + label::before {
+	content: '';
+    position: absolute;
+    left: 0px;
+    
+    width: 18px;
+    height: 18px;
+    
+    background: #dddddd;
+    border-radius: 4px;
+}
+.c-customIcheck input[type="checkbox"] + label::after {
+	content: '';
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    
+    width: 3px;
+    height: 8px;
+    
+    border: 2px solid #000000;
+    border-top: none;
+    border-left: none;
+    
+    transform: rotate(45deg);
+    opacity: 0.2;
+}
+.c-customIcheck input[type="checkbox"]:checked + label::after {
+	opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+	<div class="c-customIcheck c-inline">
+      <input type="checkbox" value="" id="customIcheck1" name="">
+      <label for="customIcheck1">Check Me</label>
+    </div>
+    <div class="c-customIcheck c-inline">
+      <input type="checkbox" value="" id="customIcheck2" name="">
+      <label for="customIcheck2">Check Me Too</label>
+    </div>
+</body>
+</html>
